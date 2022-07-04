@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <MusicAside></MusicAside>
+    <MusicCenter></MusicCenter>
+    <MusicLyric></MusicLyric>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MusicAside from "@/components/MusicAside.vue"
+import MusicCenter from '@/components/MusicCenter.vue';
+import MusicLyric from '@/components/MusicLyric.vue'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {MusicAside,MusicCenter,MusicLyric}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less">
+  .app {
+      margin: 10px auto;
+      width: 1060px;
+      height: 700px;
+      display: flex;
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+    }
 </style>
